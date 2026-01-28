@@ -26,6 +26,16 @@ class AppStrings {
   static const String standby = 'Standby';
   static const String gpsSystemStopped = 'GPS System is Stopped';
   static const String startGPS = 'Start';
+  static const String stopGPS = 'Stop';
+  static const String gpsTracking = 'GPS Tracking Active';
+  static const String gpsRunning = 'GPS System is Running ...';
+  static const String gpsDisabled = 'GPS is Disabled';
+  static const String gpsDisabledMessage = 'Please enable GPS in device settings';
+  static const String gpsPermissionRequired = 'Location Permission Required';
+  static const String gpsError = 'GPS Error';
+  static const String latitude = 'Lat';
+  static const String longitude = 'Lon';
+  static const String lastUpdated = 'Last Updated';
 
   // Error Messages
   static const String imageNotFound = 'Floor plan image not found';

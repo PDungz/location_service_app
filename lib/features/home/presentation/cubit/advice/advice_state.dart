@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../domain/entities/advice.dart';
+import '../../../domain/entities/advice.dart';
 
 /// Base class for advice states
 abstract class AdviceState extends Equatable {

@@ -31,6 +31,12 @@ class AppColors {
   static final Color errorLight = Colors.red[50]!;
   static final Color errorBorder = Colors.red[300]!;
 
+  // GPS State Colors
+  static const Color gpsActive = Colors.blue;
+  static const Color gpsStopped = Color(0xFF00BE6C);
+  static final Color gpsDisabled = Colors.grey[500]!;
+  static const Color gpsStop = Color(0xFFE53935);
+
   // Shadow Colors
   static const Color shadow = Colors.black12;
   static const Color shadowDark = Colors.black26;

@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../domain/entities/advice.dart';
-import '../../domain/usecases/get_advice.dart';
+import '../../../domain/entities/advice.dart';
+import '../../../domain/usecases/get_advice.dart';
 import 'advice_state.dart';
 
 /// Cubit for managing advice fetching state

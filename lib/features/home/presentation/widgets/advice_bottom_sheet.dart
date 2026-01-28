@@ -6,8 +6,8 @@ import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_dimensions.dart';
 import '../../../../core/constants/app_strings.dart';
 import '../../../../core/di/injection_container.dart';
-import '../cubit/advice_cubit.dart';
-import '../cubit/advice_state.dart';
+import '../cubit/advice/advice_cubit.dart';
+import '../cubit/advice/advice_state.dart';
 
 /// Advice bottom sheet widget
 /// Displays fetched advice and provides controls to fetch more
