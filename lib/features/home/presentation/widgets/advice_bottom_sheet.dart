@@ -256,11 +256,11 @@ class AdviceBottomSheet extends StatelessWidget {
     }
 
     return GestureDetector(
-      onTap: () {
-        if (isLoading) {
-          // Stop fetching when running
-          context.read<AdviceCubit>().reset();
-        } else {
+      onTap:
+          isLoading
+              ? () {}
+              : () {
+                if (!isLoading) {
           // Start fetching when idle
           context.read<AdviceCubit>().fetchMultipleAdvices();
         }
