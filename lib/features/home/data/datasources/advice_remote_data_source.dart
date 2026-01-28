@@ -19,13 +19,13 @@ class AdviceRemoteDataSourceImpl implements AdviceRemoteDataSource {
   @override
   Future<AdviceModel> getAdvice() async {
     try {
-      print('🌐 [API REQUEST] GET https://api.adviceslip.com/advice');
+      print('[API REQUEST] GET https://api.adviceslip.com/advice');
 
       final response = await dio.get('https://api.adviceslip.com/advice');
 
-      print('✅ [API RESPONSE] Status: ${response.statusCode}');
-      print('📦 [API DATA] ${response.data}');
-      print('📋 [DATA TYPE] ${response.data.runtimeType}');
+      print('[API RESPONSE] Status: ${response.statusCode}');
+      print('[API DATA] ${response.data}');
+      print('[DATA TYPE] ${response.data.runtimeType}');
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> jsonData =
@@ -33,11 +33,11 @@ class AdviceRemoteDataSourceImpl implements AdviceRemoteDataSource {
 
         return AdviceModel.fromJson(jsonData);
       } else {
-        print('❌ [API ERROR] Failed with status: ${response.statusCode}');
+        print('[API ERROR] Failed with status: ${response.statusCode}');
         throw ServerException('Failed to fetch advice: ${response.statusCode}');
       }
     } on DioException catch (e) {
-      print('❌ [DIO ERROR] Type: ${e.type}, Message: ${e.message}');
+      print('[DIO ERROR] Type: ${e.type}, Message: ${e.message}');
       if (e.type == DioExceptionType.connectionTimeout ||
           e.type == DioExceptionType.receiveTimeout) {
         throw NetworkException('Connection timeout');
@@ -47,7 +47,7 @@ class AdviceRemoteDataSourceImpl implements AdviceRemoteDataSource {
         throw ServerException(e.message ?? 'Unknown error occurred');
       }
     } catch (e) {
-      print('❌ [UNEXPECTED ERROR] $e');
+      print('[UNEXPECTED ERROR] $e');
       throw ServerException('Unexpected error: $e');
     }
   }
