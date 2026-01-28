@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:location_service_app/features/home/presentation/pages/home_screen.dart';
+import 'core/di/injection_container.dart' as di;
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
   runApp(const MyApp());
 }
 
